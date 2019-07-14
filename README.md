@@ -7,7 +7,7 @@
 5. To run the code, open the extracted file in your File Explorer and double click on the "index.html" file.
 ## Must know:
 Whenever you add a new file, you must add this:
-> <script language="javascript" type="text/javascript" src=" __NewFileName.js__  "></script>
+> <script language="javascript" type="text/javascript" src="NewFileName.js"></script>
 to the index.html file.
 ## Useful links:
 1. Reference: https://p5js.org/reference/
