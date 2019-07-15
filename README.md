@@ -1,4 +1,5 @@
 # Template
+Let me know if you need help figuring out the code or if you run into a bug. I'll be happy to help. Also let me know if you need help in any of your other events.
 ## How to setup and run/edit project:
 1. Click on "Clone or download" (the green button on the upper right hand corner), then "Download ZIP"
 2. Extract it to somewhere where you can find it.
