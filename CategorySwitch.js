@@ -4,6 +4,8 @@ function CategorySwitch(x,y,w,h,categoryBoundary,t,ts,textOffset=5,onColor=[165,
   this.switchedOn = false;
 
   this.update = function(){
+    push();
+
     if(!this.switchedOn){
       fill(255);
     }else{
@@ -23,5 +25,7 @@ function CategorySwitch(x,y,w,h,categoryBoundary,t,ts,textOffset=5,onColor=[165,
       &&(mouseX<x||mouseX>x+w||mouseY<y||mouseY>y+h)){
       this.switchedOn = false;
     }
+
+    pop();
   }
 }

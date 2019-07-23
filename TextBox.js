@@ -7,15 +7,17 @@ function TextBox(x,y,w,h,ts,onColor=[165,230,250]){
   this.switchedOn = false;
   this.keyOff = false;
   this.data = "";
-  this.defaultMessage="Type Answer Here";
+  this.defaultMessage="Type Here";
 
   this.update = function(){
+    push();
     stroke(0);
     if(this.switchedOn){
       fill(onColor[0],onColor[1],onColor[2]);
     }else{
       fill(255);
     }
+    rect(x,y,w,h);
 
     if(this.switchedOn&&pressed){
       if(keyCode==BACKSPACE){
@@ -27,7 +29,6 @@ function TextBox(x,y,w,h,ts,onColor=[165,230,250]){
       }
     }
 
-    rect(x,y,w,h);
     textSize(ts);
     fill(0);
     if(this.data!=""){
@@ -44,5 +45,6 @@ function TextBox(x,y,w,h,ts,onColor=[165,230,250]){
     }else if(mouseIsPressed&&(mouseX<x||mouseX>x+w||mouseY<y||mouseY>y+h)){
       this.switchedOn = false;
     }
+    pop();
   }
 }

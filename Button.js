@@ -1,13 +1,14 @@
-var mouseIsReleased=true;
-function mouseReleased(){
-  mouseIsReleased=true;
-}
+//var mouseIsReleased=true;
+//function mouseReleased(){
+//  mouseIsReleased=true;
+//}
 
 function Button(x,y,w,h,t,ts,xOffset=5,onColor=[165,230,250]){
   this.clicked =false;
   this.text=t;
 
   this.update = function(){
+    push();
     if(this.clicked){
       fill(onColor[0],onColor[1],onColor[2],120);
     }else{
@@ -20,11 +21,12 @@ function Button(x,y,w,h,t,ts,xOffset=5,onColor=[165,230,250]){
     stroke(0);
     text(this.text,x+xOffset,y+h-10);
 
-    if(mouseIsPressed && mouseX>x && mouseX<(x+w) && mouseY>y && mouseY<y+h && mouseIsReleased){
+    if(mouseIsPressed && mouseX>x && mouseX<(x+w) && mouseY>y && mouseY<y+h /*&& mouseIsReleased*/){
       this.clicked = true;
-      mouseIsReleased = false;
+      //mouseIsReleased = false;
     }else{
       this.clicked = false;
     }
+    pop();
   }
 }
